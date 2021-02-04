@@ -1,5 +1,25 @@
 {% extends 'mysite/base.html' %}
 {% block body %}
     
+    {% if user.is_authenticated %}
+        <div class="form">
+            {% if messages %}
+                 {% for message in messages %}
+                 <div class="message">
+                     {{message}}
+                 </div>
+                {% endfor %}
+             {% endif %}
+            <h3>What's on your mind?</h3>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{form}}
+                <br>
+                <br>
+                <button class="mybtn" type="submit">Post</button>
+            </form>
+        </div>        
+    {% endif %}
+        
 {% endblock body %}
     

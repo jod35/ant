@@ -42,9 +42,15 @@ header{
     width: 50%;
     margin:50px auto;
 }
-form input{
+.form input{
     width: 100%;
     margin-top: 20px;
+    padding: 10px;
+}
+.form textarea, select{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
 }
 .helptext{
     color:teal;
@@ -52,6 +58,33 @@ form input{
 .message{
     padding: 20px;
     border: 1px solid teal;
+}
+.posts{
+    width: 60%;
+    margin:50px auto;
+}
+.post{
+    padding: 20px;
+    background-color: lightgray;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.post-info{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+.post-options{
+    padding: 5px;
+    display: flex;
+    margin-top: 10px;
+
+}
+.post-options a{
+    color: blue;
+}
+.post-options > a+a{
+    margin-left: 20px;
 }
 footer{
     color: white;

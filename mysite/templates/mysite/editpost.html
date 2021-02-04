@@ -1,0 +1,12 @@
+{% extends 'mysite/base.html' %}
+{% block body %}
+    <div class="form">
+      <form action="" method="post">
+        {% csrf_token %}
+        <h2>Edit Post</h2>
+        {{form}}
+        <button type="submit" class="mybtn">Update</button>
+      </form>
+    </div>
+{% endblock body %}
+    

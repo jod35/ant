@@ -1,0 +1,35 @@
+{% extends 'mysite/base.html' %}
+{% block body %}
+   
+    
+    <div class="posts">
+        <h2>Posts by {{user}}</h2>
+        {% for p  in posts %}
+            <div class="post">
+                <div class="post-info">
+                    <h3>{{p.title}}
+                        {% if p.status == 'draft' %}
+                           <span><small style="color: red;">{{p.status}}</small></span>
+   
+                        {% else %}
+                           <span><small style="color: green;">{{p.status}}</small></span>
+                        {% endif %}
+                    </h3>
+                   <p>by <strong>{{p.author}}</strong></p>
+                </div>
+                <p>{{p.body}}</p>
+                <br>
+                <p>
+                    <small>On <strong style="color: blue;">{{p.created}}</strong></small>
+                </p>
+                <div class="post-options">
+                    <a href="">Comment</a>
+                    <a href="/edit/{{p.pk}}">Edit</a>
+                    <a href="">Delete</a>
+                </div>
+            </div>
+         {% endfor %}
+    </div>
+        
+{% endblock body %}
+    

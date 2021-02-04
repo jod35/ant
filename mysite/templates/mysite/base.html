@@ -24,6 +24,8 @@
             <ul>
                 
                 {% if user.is_authenticated %}
+                    <li><a href="{% url 'mysite:home' %}">Create A Post</a></li>
+                    <li><a href="{% url 'mysite:myposts' %}">Your Posts</a></li>
                     <li><a href="{% url 'mysite:logout' %}">Log Out</a></li>
 
                 {% else %}
